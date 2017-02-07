@@ -16,7 +16,7 @@ RUN mkdir -p /var/lock/apache2 /var/run/apache2 /var/conf /var/log/supervisor /h
 
 RUN a2enmod php5 && a2enmod rewrite
 
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY configs/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 RUN rm /var/www/html/index.html
 
@@ -32,7 +32,7 @@ pear install Log && pear channel-discover pear.dotkernel.com/zf1/svn && pear ins
 chown -R www-data:www-data /home/www-data && \ 
 rm seeddms*
 
-COPY 000-default.conf /etc/apache2/sites-enabled/000-default.conf
+COPY configs/000-default.conf /etc/apache2/sites-enabled/000-default.conf
 
 VOLUME ["/home/www-data/seeddms43x/data/", "/var/log/apache2/", "/home/www-data/seeddms43x/www/conf/"]
 
