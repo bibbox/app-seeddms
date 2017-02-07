@@ -1,0 +1,4 @@
+{
+  runningcontainers:["§§INSTANCE-seeddms", "§§INSTANCE-seeddms-db"],
+  supportcontainers:["§§INSTANCE-seeddms-data"]    
+}

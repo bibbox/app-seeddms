@@ -1,0 +1,10 @@
+{
+  "mappings": [
+    {
+      "id": "§§PORT",
+      "url": "§§INSTANCE",
+      "protocol": "HTTP",
+      "proxy" : "PRIMARY"
+    }
+  ]
+}
