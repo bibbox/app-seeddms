@@ -1,22 +1,22 @@
 version: '2'
 services:
 
-  §§INSTANCE-seeddms:
-    image: bibbox/seeddms
-    container_name:  §§INSTANCE-seeddms
+  DDD-seeddms:
+    image: bibbox/app-seeddms
+    container_name:  DDD-seeddms
     links:
-      - §§INSTANCE-seeddms-db:seeddms-db
+      - DDD-seeddms-db:seeddms-db
     ports:
-      - "§§PORT:80"
+      - "8888:80"
     depends_on:
-      - §§INSTANCE-seeddms-db
-      - §§INSTANCE-seeddms-data
+      - DDD-seeddms-db
+      - DDD-seeddms-data
     volumes_from: 
-      - §§INSTANCE-seeddms-data
+      - DDD-seeddms-data
 
-  §§INSTANCE-seeddms-db:
+  DDD-seeddms-db:
     image: mysql:8
-    container_name: §§INSTANCE-seeddms-db
+    container_name: DDD-seeddms-db
     user: root
     environment:
       - MYSQL_ROOT_PASSWORD=thispasswordisneverusedeveninsidethecontainer
@@ -24,12 +24,12 @@ services:
       - MYSQL_USER=seeddms
       - MYSQL_PASSWORD=seeddms4bibbox
     volumes_from: 
-      - §§INSTANCE-seeddms-data
+      - DDD-seeddms-data
     depends_on:
-      - §§INSTANCE-seeddms-data
+      - DDD-seeddms-data
 
-  §§INSTANCE-seeddms-data:
+  DDD-seeddms-data:
     image: busybox
-    container_name: §§INSTANCE-seeddms-data
+    container_name: DDD-seeddms-data
     volumes:
-      - ./var/lib/mysql:/var/lib/mysql
+      - /Users/lukaspessl/dockerdata/var/lib/mysql:/var/lib/mysql

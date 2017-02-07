@@ -4,17 +4,17 @@
 #
 
 FROM debian:jessie
-MAINTAINER José Juan Escudero
+MAINTAINER Lukas Pessl
 
-ENV SEEDDMS_VERSION=4.3.26
+ENV SEEDDMS_VERSION=5.0.3
 ENV LUCENE_VERSION=1.1.8
 ENV PREVIEW_VERSION=1.1.8
 
-RUN apt-get update && apt-get -y install apache2 php5  php5-mysql php5-gd php-pear poppler-utils catdoc curl supervisor
+RUN apt-get update && apt-get -y install apache2 php7.0  php7.0-mysql php7.0-gd php-pear poppler-utils catdoc curl supervisor
 
 RUN mkdir -p /var/lock/apache2 /var/run/apache2 /var/conf /var/log/supervisor /home/www-data
 
-RUN a2enmod php5 && a2enmod rewrite
+RUN a2enmod php5 && a2enmod rewrite && a2enmod dav && a2enmod dav_fs
 
 COPY configs/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
@@ -34,7 +34,7 @@ rm seeddms*
 
 COPY configs/000-default.conf /etc/apache2/sites-enabled/000-default.conf
 
-VOLUME ["/home/www-data/seeddms43x/data/", "/var/log/apache2/", "/home/www-data/seeddms43x/www/conf/"]
+VOLUME ["/home/www-data/seeddms50x/data/", "/var/log/apache2/", "/home/www-data/seeddms50x/www/conf/"]
 
 EXPOSE 80 443
 
