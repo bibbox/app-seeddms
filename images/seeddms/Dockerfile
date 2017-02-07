@@ -3,25 +3,41 @@
 # VERSION 1.0
 #
 
-FROM php:7.0-apache
-MAINTAINER xxxx
+FROM debian:jessie
+MAINTAINER José Juan Escudero
 
-RUN apt-get update
+ENV SEEDDMS_VERSION=4.3.26
+ENV LUCENE_VERSION=1.1.8
+ENV PREVIEW_VERSION=1.1.8
 
-RUN apt-get install -q -y libpng12-dev imagemagick
+RUN apt-get update && apt-get -y install apache2 php5  php5-mysql php5-gd php-pear poppler-utils catdoc curl supervisor
 
-RUN docker-php-ext-install gd
+RUN mkdir -p /var/lock/apache2 /var/run/apache2 /var/conf /var/log/supervisor /home/www-data
 
-RUN apt-get install -q -y php-pear  php5-gd php5-sqlite poppler-utils catdoc
+RUN a2enmod php5 && a2enmod rewrite
 
-ADD misc/seeddms-quickstart-5.0.5.tar.gz /var/www/
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-RUN a2enmod rewrite
+RUN rm /var/www/html/index.html
 
-COPY misc/php.ini /usr/local/etc/php/
-COPY misc/000-default.conf /etc/apache2/sites-available/
+RUN curl -L https://sourceforge.net/projects/seeddms/files/seeddms-$SEEDDMS_VERSION/SeedDMS_Core-$SEEDDMS_VERSION.tgz/download > SeedDMS_Core-$SEEDDMS_VERSION.tgz  && \
+curl -L https://sourceforge.net/projects/seeddms/files/seeddms-$SEEDDMS_VERSION/seeddms-quickstart-$SEEDDMS_VERSION.tar.gz/download > seeddms-quickstart-$SEEDDMS_VERSION.tar.gz  && \
+curl -L https://sourceforge.net/projects/seeddms/files/seeddms-$SEEDDMS_VERSION/SeedDMS_Lucene-$LUCENE_VERSION.tgz/download > seedDMS_Lucene-$LUCENE_VERSION.tgz  && \
+curl -L https://sourceforge.net/projects/seeddms/files/seeddms-$SEEDDMS_VERSION/SeedDMS_Preview-$PREVIEW_VERSION.tgz/download > SeedDMS_Preview-$PREVIEW_VERSION.tgz  && \
+tar xvzf seeddms-quickstart-$SEEDDMS_VERSION.tar.gz --directory /home/www-data && \
+pear install SeedDMS_Core-$SEEDDMS_VERSION.tgz  && \
+pear install seedDMS_Lucene-$LUCENE_VERSION.tgz  && \
+pear install SeedDMS_Preview-$PREVIEW_VERSION.tgz && \
+pear install Log && pear channel-discover pear.dotkernel.com/zf1/svn && pear install zend/zend && \
+chown -R www-data:www-data /home/www-data && \ 
+rm seeddms*
 
-COPY misc/settings.xml /var/www/seeddms50x/seeddms-5.0.5/conf/settings.xml
-RUN chown -R www-data:www-data /var/www/seeddms50x/
+COPY 000-default.conf /etc/apache2/sites-enabled/000-default.conf
 
-RUN touch /var/www/seeddms50x/seeddms-5.0.5/conf/ENABLE_INSTALL_TOOL
+VOLUME ["/home/www-data/seeddms43x/data/", "/var/log/apache2/", "/home/www-data/seeddms43x/www/conf/"]
+
+EXPOSE 80 443
+
+VOLUME /var/conf
+
+CMD ["/usr/bin/supervisord"]
