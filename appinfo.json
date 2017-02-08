@@ -1,10 +1,10 @@
 {
-		"name": "PhenoTips v1.3 milestone 5 (not for prodcution)",
-		"short_name": "PhenoTips",
-		"version": "v1.3 milestone 5",
-		"description": "PhenoTips® is a software tool for collecting and analyzing phenotypic information for patients with genetic disorders",
-         "short_description": "Phenotyp Editor for the HPO ontology",
-		"catalogue_url": "http://bibbox.org/software-shortlist/-/asset_publisher/NpKk4COV3bZZ/content/phenotips?_101_INSTANCE_NpKk4COV3bZZ_redirect=%2Fsoftware-shortlist",
-		"application_url": "https://phenotips.org",
-		"tags": ["Phenotyping", "Genetic Disorders"]
+		"name": "SeedDMS 5.0.5 (not for production)",
+		"short_name": "SeedDMS",
+		"version": "v5.0.5",
+		"description": "SeedDMS is an easy to use but powerful Open Source Document Management System based on PHP and MySQL or sqlite3",
+         	"short_description": "SeedDMS Document Management System",
+		"catalogue_url": "",
+		"application_url": "http://www.seeddms.org",
+		"tags": ["Document Management"]
 }
