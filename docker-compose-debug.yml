@@ -33,3 +33,4 @@ services:
     container_name: DDD-seeddms-data
     volumes:
       - /Users/lukaspessl/dockerdata/var/lib/mysql:/var/lib/mysql
+      - /Users/lukaspessl/dockerdata/var/www/seeddms50x/data:/var/www/seeddms50x/data
