@@ -6,7 +6,7 @@
 FROM php:7.0-apache
 MAINTAINER Lukas Pessl
 
-ENV SEEDDMS_VERSION=5.0.5
+ENV SEEDDMS_VERSION=5.0.9
 ENV LUCENE_VERSION=1.1.9
 ENV PREVIEW_VERSION=1.1.9
 
@@ -46,18 +46,20 @@ RUN curl -L https://sourceforge.net/projects/seeddms/files/seeddms-$SEEDDMS_VERS
 curl -L https://sourceforge.net/projects/seeddms/files/seeddms-$SEEDDMS_VERSION/seeddms-quickstart-$SEEDDMS_VERSION.tar.gz/download > seeddms-quickstart-$SEEDDMS_VERSION.tar.gz  && \
 curl -L https://sourceforge.net/projects/seeddms/files/seeddms-$SEEDDMS_VERSION/SeedDMS_Lucene-$LUCENE_VERSION.tgz/download > seedDMS_Lucene-$LUCENE_VERSION.tgz  && \
 curl -L https://sourceforge.net/projects/seeddms/files/seeddms-$SEEDDMS_VERSION/SeedDMS_Preview-$PREVIEW_VERSION.tgz/download > SeedDMS_Preview-$PREVIEW_VERSION.tgz  && \
-tar xvzf seeddms-quickstart-$SEEDDMS_VERSION.tar.gz --directory /var/www && \
+
+# tar xvzf seeddms-quickstart-$SEEDDMS_VERSION.tar.gz --directory /var/www && \
+
 pear install SeedDMS_Core-$SEEDDMS_VERSION.tgz  && \
 pear install seedDMS_Lucene-$LUCENE_VERSION.tgz  && \
 pear install SeedDMS_Preview-$PREVIEW_VERSION.tgz && \
 pear install Log && pear channel-discover pear.dotkernel.com/zf1/svn && pear install zend/zend && pear install HTTP_WebDAV_Server-1.0.0RC8 && \
 rm seeddms*
 
-COPY configs/create_tables-innodb.sql /var/www/seeddms50x/seeddms-5.0.5/install/create_tables-innodb.sql
+COPY configs/create_tables-innodb.sql /var/www/seeddms50x/seeddms-$SEEDDMS_VERSION/install/create_tables-innodb.sql
 COPY configs/php.ini /usr/local/etc/php/
 COPY configs/000-default.conf /etc/apache2/sites-available/
-COPY configs/settings.xml /var/www/seeddms50x/seeddms-5.0.5/conf/settings.xml
+COPY configs/settings.xml /var/www/seeddms50x/seeddms-$SEEDDMS_VERSION/conf/settings.xml
 
 RUN chown -R www-data:www-data /var/www/seeddms50x/
 
-RUN touch /var/www/seeddms50x/seeddms-5.0.5/conf/ENABLE_INSTALL_TOOL
+RUN touch /var/www/seeddms50x/seeddms-$SEEDDMS_VERSION/conf/ENABLE_INSTALL_TOOL
