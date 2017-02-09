@@ -103,8 +103,8 @@
     -->
     <database
       dbDriver = "mysql"
-      dbHostname = "seeddms:3306"
-      dbDatabase = "seeddms-db"
+      dbHostname = "seeddms-db:3306"
+      dbDatabase = "seeddms"
       dbUser = "seeddms"
       dbPass = "seeddms4bibbox"
       doNotCheckVersion="false"
