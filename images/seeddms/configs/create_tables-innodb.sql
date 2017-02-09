@@ -494,7 +494,7 @@ CREATE TABLE `tblSessions` (
   `theme` varchar(30) NOT NULL default '',
   `language` varchar(30) NOT NULL default '',
   `clipboard` text default NULL,
-    `su` INTEGER DEFAULT NULL,
+	`su` INTEGER DEFAULT NULL,
   `splashmsg` text default NULL,
   PRIMARY KEY  (`id`),
   CONSTRAINT `tblSessions_user` FOREIGN KEY (`userID`) REFERENCES `tblUsers` (`id`) ON DELETE CASCADE
@@ -712,7 +712,7 @@ CREATE TABLE `tblVersion` (
 --
 
 INSERT INTO tblUsers VALUES (1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Administrator', 'address@server.com', '', '', '', 1, 0, '1000-01-01 00:00:00', 0, 0, 0, NULL);
-INSERT INTO tblUsers VALUES (2, 'guest', NULL, 'Guest User', NULL, '', '', '', 2, 0, '9999-01-01 00:00:00', 0, 0, 0, NULL);
+INSERT INTO tblUsers VALUES (2, 'guest', NULL, 'Guest User', NULL, '', '', '', 2, 0, '1000-01-01 00:00:00', 0, 0, 0, NULL);
 INSERT INTO tblFolders VALUES (1, 'DMS', 0, '', 'DMS root', UNIX_TIMESTAMP(), 1, 0, 2, 0);
 INSERT INTO tblVersion VALUES (NOW(), 5, 0, 0);
 INSERT INTO tblCategory VALUES (0, '');
