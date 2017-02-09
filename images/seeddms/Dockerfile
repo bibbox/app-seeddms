@@ -17,9 +17,6 @@ RUN apt-get update && \
     apt-get -q -y install \
         libpng12-dev \
         imagemagick \
-        # php5-gd \
-        # php5-mysql \
-        # php5-mysqli \
         libmcrypt-dev \
         php-pear \
         poppler-utils \
@@ -47,11 +44,11 @@ curl -L https://sourceforge.net/projects/seeddms/files/seeddms-$SEEDDMS_VERSION/
 curl -L https://sourceforge.net/projects/seeddms/files/seeddms-$SEEDDMS_VERSION/SeedDMS_Lucene-$LUCENE_VERSION.tgz/download > seedDMS_Lucene-$LUCENE_VERSION.tgz  && \
 curl -L https://sourceforge.net/projects/seeddms/files/seeddms-$SEEDDMS_VERSION/SeedDMS_Preview-$PREVIEW_VERSION.tgz/download > SeedDMS_Preview-$PREVIEW_VERSION.tgz  && \
 
-# tar xvzf seeddms-quickstart-$SEEDDMS_VERSION.tar.gz --directory /var/www && \
+tar xvzf seeddms-quickstart-$SEEDDMS_VERSION.tar.gz --directory /var/www && \
 
-pear install SeedDMS_Core-$SEEDDMS_VERSION.tgz  && \
-pear install seedDMS_Lucene-$LUCENE_VERSION.tgz  && \
-pear install SeedDMS_Preview-$PREVIEW_VERSION.tgz && \
+# pear install SeedDMS_Core-$SEEDDMS_VERSION.tgz  && \
+# pear install seedDMS_Lucene-$LUCENE_VERSION.tgz  && \
+# pear install SeedDMS_Preview-$PREVIEW_VERSION.tgz && \
 pear install Log && pear channel-discover pear.dotkernel.com/zf1/svn && pear install zend/zend && pear install HTTP_WebDAV_Server-1.0.0RC8 && \
 rm seeddms*
 
