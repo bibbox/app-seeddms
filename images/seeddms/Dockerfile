@@ -43,12 +43,10 @@ RUN curl -L https://sourceforge.net/projects/seeddms/files/seeddms-$SEEDDMS_VERS
 curl -L https://sourceforge.net/projects/seeddms/files/seeddms-$SEEDDMS_VERSION/seeddms-quickstart-$SEEDDMS_VERSION.tar.gz/download > seeddms-quickstart-$SEEDDMS_VERSION.tar.gz  && \
 curl -L https://sourceforge.net/projects/seeddms/files/seeddms-$SEEDDMS_VERSION/SeedDMS_Lucene-$LUCENE_VERSION.tgz/download > seedDMS_Lucene-$LUCENE_VERSION.tgz  && \
 curl -L https://sourceforge.net/projects/seeddms/files/seeddms-$SEEDDMS_VERSION/SeedDMS_Preview-$PREVIEW_VERSION.tgz/download > SeedDMS_Preview-$PREVIEW_VERSION.tgz  && \
-
 tar xvzf seeddms-quickstart-$SEEDDMS_VERSION.tar.gz --directory /var/www && \
-
-# pear install SeedDMS_Core-$SEEDDMS_VERSION.tgz  && \
-# pear install seedDMS_Lucene-$LUCENE_VERSION.tgz  && \
-# pear install SeedDMS_Preview-$PREVIEW_VERSION.tgz && \
+pear install SeedDMS_Core-$SEEDDMS_VERSION.tgz  && \
+pear install seedDMS_Lucene-$LUCENE_VERSION.tgz  && \
+pear install SeedDMS_Preview-$PREVIEW_VERSION.tgz && \
 pear install Log && pear channel-discover pear.dotkernel.com/zf1/svn && pear install zend/zend && pear install HTTP_WebDAV_Server-1.0.0RC8 && \
 rm seeddms*
 
