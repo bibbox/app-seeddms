@@ -43,7 +43,7 @@ RUN curl -L https://sourceforge.net/projects/seeddms/files/seeddms-$SEEDDMS_VERS
 curl -L https://sourceforge.net/projects/seeddms/files/seeddms-$SEEDDMS_VERSION/seeddms-$SEEDDMS_VERSION.tar.gz/download > seeddms-$SEEDDMS_VERSION.tar.gz  && \
 curl -L https://sourceforge.net/projects/seeddms/files/seeddms-$SEEDDMS_VERSION/SeedDMS_Lucene-$LUCENE_VERSION.tgz/download > seedDMS_Lucene-$LUCENE_VERSION.tgz  && \
 curl -L https://sourceforge.net/projects/seeddms/files/seeddms-$SEEDDMS_VERSION/SeedDMS_Preview-$PREVIEW_VERSION.tgz/download > SeedDMS_Preview-$PREVIEW_VERSION.tgz  && \
-tar xvzf seeddms-$SEEDDMS_VERSION.tar.gz --directory /var/www && \
+tar xvzf seeddms-$SEEDDMS_VERSION.tar.gz --directory /var/www/seeddms50x && \
 pear install SeedDMS_Core-$SEEDDMS_VERSION.tgz  && \
 pear install seedDMS_Lucene-$LUCENE_VERSION.tgz  && \
 pear install SeedDMS_Preview-$PREVIEW_VERSION.tgz && \
