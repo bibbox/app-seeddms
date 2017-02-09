@@ -51,7 +51,7 @@ curl -L https://sourceforge.net/projects/seeddms/files/seeddms-$SEEDDMS_VERSION/
 pear install SeedDMS_Core-$SEEDDMS_VERSION.tgz  && \
 pear install seedDMS_Lucene-$LUCENE_VERSION.tgz  && \
 pear install SeedDMS_Preview-$PREVIEW_VERSION.tgz && \
-pear install Log && pear channel-discover pear.dotkernel.com/zf1/svn && pear install zend/zend && pear install HTTP_WebDAV_Server-1.0.0RC8 && \
+pear install Log && pear channel-discover pear.dotkernel.com/zf1/svn && pear install zend/zend && pear install HTTP_WebDAV_Server-1.0.0RC8
 # rm seeddms*
 
 COPY configs/create_tables-innodb.sql /var/www/seeddms50x/seeddms-$SEEDDMS_VERSION/install/create_tables-innodb.sql
