@@ -2,7 +2,7 @@ version: '2'
 services:
 
   DDD-seeddms:
-    image: bibbox/app-seeddms
+    image: bibbox/seeddms
     container_name:  DDD-seeddms
     links:
       - DDD-seeddms-db:seeddms-db
