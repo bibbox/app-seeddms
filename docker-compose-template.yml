@@ -1,9 +1,17 @@
 version: '2'
+
+networks:
+    bibbox-default-network:
+      external: true
+      
 services:
 
   §§INSTANCE-seeddms:
     image: bibbox/seeddms
     container_name:  §§INSTANCE-seeddms
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
     links:
       - §§INSTANCE-seeddms-db:seeddms-db
     ports:
@@ -17,6 +25,9 @@ services:
   §§INSTANCE-seeddms-db:
     image: mysql:8
     container_name: §§INSTANCE-seeddms-db
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
     user: root
     environment:
       - MYSQL_ROOT_PASSWORD=thispasswordisneverusedeveninsidethecontainer
