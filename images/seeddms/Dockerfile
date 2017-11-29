@@ -50,11 +50,11 @@ pear install SeedDMS_Preview-$PREVIEW_VERSION.tgz && \
 pear install Log && pear channel-discover pear.dotkernel.com/zf1/svn && pear install zend/zend && pear install HTTP_WebDAV_Server-1.0.0RC8 && \
 rm seeddms*
 
-COPY configs/create_tables-innodb.sql /var/www/seeddms50x/seeddms-$SEEDDMS_VERSION/install/create_tables-innodb.sql
+COPY configs/create_tables-innodb.sql /var/www/seeddms51x/seeddms-$SEEDDMS_VERSION/install/create_tables-innodb.sql
 COPY configs/php.ini /usr/local/etc/php/
 COPY configs/000-default.conf /etc/apache2/sites-available/
-COPY configs/settings.xml /var/www/seeddms50x/seeddms-$SEEDDMS_VERSION/conf/settings.xml
+COPY configs/settings.xml /var/www/seeddms51x/seeddms-$SEEDDMS_VERSION/conf/settings.xml
 
-RUN chown -R www-data:www-data /var/www/seeddms50x/
+RUN chown -R www-data:www-data /var/www/seeddms51x/
 
-RUN touch /var/www/seeddms50x/seeddms-$SEEDDMS_VERSION/conf/ENABLE_INSTALL_TOOL
+RUN touch /var/www/seeddms51x/seeddms-$SEEDDMS_VERSION/conf/ENABLE_INSTALL_TOOL

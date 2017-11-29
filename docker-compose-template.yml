@@ -44,5 +44,5 @@ services:
     container_name: §§INSTANCE-seeddms-data
     volumes:
       - ./var/lib/mysql:/var/lib/mysql
-      - ./var/www/seeddms50x/data:/var/www/seeddms50x/data
+      - ./var/www/seeddms51x/data:/var/www/seeddms51x/data
 
