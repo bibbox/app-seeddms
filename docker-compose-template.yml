@@ -45,4 +45,3 @@ services:
     volumes:
       - ./var/lib/mysql:/var/lib/mysql
       - ./var/www/seeddms51x/data:/var/www/seeddms51x/data
-
