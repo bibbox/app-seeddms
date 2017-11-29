@@ -30,10 +30,10 @@ services:
       - bibbox-default-network
     user: root
     environment:
-      - MYSQL_ROOT_PASSWORD=thispasswordisneverusedeveninsidethecontainer
+      - MYSQL_ROOT_PASSWORD=§§MYSQL_ROOT_PASSWORD
       - MYSQL_DATABASE=seeddms
       - MYSQL_USER=seeddms
-      - MYSQL_PASSWORD=seeddms4bibbox
+      - MYSQL_PASSWORD=§§MYSQL_USER_PASSWORD
     volumes_from: 
       - §§INSTANCE-seeddms-data
     depends_on:
