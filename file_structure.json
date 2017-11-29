@@ -1,8 +1,8 @@
 {
   "makefolders":[
     "var/lib/mysql",
-    "var/www/seeddms50x/data/lucene",
-    "var/www/seeddms50x/data/staging"
+    "var/www/seeddms51x/data/lucene",
+    "var/www/seeddms51x/data/staging"
   ],
   "copyfiles":[]
 }
