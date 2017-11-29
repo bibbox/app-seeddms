@@ -19,4 +19,4 @@
 ## Mounted Volumes
 
 * the mysql datafolder _/var/lib/mysql_ will be mounted to _/opt/apps/INSTANCE_NAME/var/lib/mysql_ in your BIBBOX kit 
-* the SeedDMS datafolder _/var/seeddms50x/data_ will be mounted to _/opt/apps/INSTANCE_NAME/var/seeddms50x/data_ in your BIBBOX kit 
+* the SeedDMS datafolder _/var/seeddms51x/data_ will be mounted to _/opt/apps/INSTANCE_NAME/var/seeddms51x/data_ in your BIBBOX kit 

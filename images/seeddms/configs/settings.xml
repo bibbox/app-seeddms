@@ -51,7 +51,7 @@
        - dropFolderDir: where files for document upload are located
        - cacheDir: where the preview images are saved
     -->
-    <server rootDir="/var/www/seeddms50x/www/" httpRoot="/" contentDir="/var/www/seeddms50x/data/" stagingDir="/var/www/seeddms50x/data/staging/" luceneDir="/var/www/seeddms50x/data/lucene/" logFileEnable="true" logFileRotation="d" enableLargeFileUpload="false" partitionSize="2000000" cacheDir="/var/www/seeddms50x/data/cache/" dropFolderDir="">
+    <server rootDir="/var/www/seeddms51x/www/" httpRoot="/" contentDir="/var/www/seeddms51x/data/" stagingDir="/var/www/seeddms51x/data/staging/" luceneDir="/var/www/seeddms51x/data/lucene/" logFileEnable="true" logFileRotation="d" enableLargeFileUpload="false" partitionSize="2000000" cacheDir="/var/www/seeddms51x/data/cache/" dropFolderDir="">
     </server>
     
     <!-- enableGuestLogin: If you want anybody to login as guest, set the following line to true
@@ -98,7 +98,7 @@
        - dbPass: password for database-access
     -->
     <!--
-    <database dbDriver="sqlite" dbHostname="localhost" dbDatabase="/var/www/seeddms50x/data/content.db" dbUser="seeddms" dbPass="seeddms" doNotCheckVersion="false">
+    <database dbDriver="sqlite" dbHostname="localhost" dbDatabase="/var/www/seeddms51x/data/content.db" dbUser="seeddms" dbPass="seeddms" doNotCheckVersion="false">
     </database>
     -->
     <database
@@ -155,7 +155,7 @@
        - updateNotifyTime: users are notified about document-changes that took place within the last "updateNotifyTime" seconds
        - extraPath: Path to addtional software. This is the directory containing additional software like the adodb directory, or the pear Log package. This path will be added to the php include path
     -->
-    <server coreDir="" luceneClassDir="" contentOffsetDir="1048576" maxDirID="0" updateNotifyTime="86400" extraPath="/var/www/seeddms50x/pear/" maxExecutionTime="30" cmdTimeout="1">
+    <server coreDir="" luceneClassDir="" contentOffsetDir="1048576" maxDirID="0" updateNotifyTime="86400" extraPath="/var/www/seeddms51x/pear/" maxExecutionTime="30" cmdTimeout="1">
     </server>
     <converters>
 		 <converter mimeType="application/pdf">pdftotext -nopgbrk %s - | sed -e 's/ [a-zA-Z0-9.]\{1\} / /g' -e 's/[0-9.]//g'</converter>
