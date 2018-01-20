@@ -6,14 +6,15 @@
 FROM php:7.0-apache
 MAINTAINER Heimo Müller
 
-ENV SEEDDMS_VERSION=5.1.4
-ENV LUCENE_VERSION=1.1.10
-ENV PREVIEW_VERSION=1.2.4
+ENV SEEDDMS_VERSION=5.1.5
+ENV LUCENE_VERSION=1.1.11
+ENV PREVIEW_VERSION=1.2.6
 
 RUN echo 'deb http://packages.dotdeb.org jessie all' > /etc/apt/sources.list.d/dotdeb.list && \
     curl http://www.dotdeb.org/dotdeb.gpg | apt-key add -
 
-RUN apt-get update && \
+RUN rm /etc/apt/preferences.d/no-debian-php && \
+    apt-get update && \
     apt-get -q -y install \
         libpng12-dev \
         imagemagick \
