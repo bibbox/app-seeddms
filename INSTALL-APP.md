@@ -10,11 +10,13 @@
 
 ![SCREEN2](screen-02.jpg)
 
-* On the next page a form for configuring installation paths will appear. Just leave it as it is but make sure to check **Create database tables** and click **Apply**!
+* On the next page a form for configuring installation paths will appear. Update in the Database settings the password as you specified in the App installtion and 
+make sure to check **Create database tables** and click **Apply**!
 
 ![SCREEN3](screen-03.jpg)
 
-* After the installation has succeeded, another screen with two links will appear. Click on **Delete the ENABLE_INSTALL_TOOL if possible**.
+* After the installation has succeeded, another screen with two links will appear. 
+Click on **Delete the ENABLE_INSTALL_TOOL if possible**.
 
 ![SCREEN4](screen-04.jpg)
 
@@ -30,6 +32,24 @@
 
 ![SCREEN7](screen-07.jpg)
 
+
+## Backup instructions
+
+* Backup the database App directory, replace APPID with the id (subdomain) of the installed app. 
+
+        /opt/bibbox/application-instance/APPID-app-seeddms
+        
+* Backup the data directory 
+    
+        /opt/bibbox/application-instance/APPID-app-seeddms/var/www/seeddms51x
+        
+* Backup the mysql database with the command
+       
+       docker exec  APPID-seeddms-db /usr/bin/mysqldump -u root --password='YOURROOTPASSWORD' seeddms > /home/vmadmin/seeddmsbackup.sql
+
+   if you forgot the database root password, you can lookup it in the docker-compose file. 
+   
+        /opt/bibbox/application-instance/APPID-app-seeddms/docker-compose.yml
 
 ## After the installation
 
