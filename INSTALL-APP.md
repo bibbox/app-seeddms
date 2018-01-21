@@ -10,7 +10,8 @@
 
 ![SCREEN2](screen-02.jpg)
 
-* On the next page a form for configuring installation paths will appear. Update in the Database settings the password as you specified in the App installtion and 
+* On the next page a form for configuring installation paths will appear. 
+Update in the database settings the password as you specified in the App installation screen and 
 make sure to check **Create database tables** and click **Apply**!
 
 ![SCREEN3](screen-03.jpg)
