@@ -7,8 +7,8 @@ FROM php:7.0-apache
 MAINTAINER Heimo Müller
 
 ENV SEEDDMS_VERSION=5.1.6
-ENV LUCENE_VERSION=1.1.11
-ENV PREVIEW_VERSION=1.2.6
+ENV LUCENE_VERSION=1.1.12
+ENV PREVIEW_VERSION=1.2.8
 
 RUN echo 'deb http://packages.dotdeb.org jessie all' > /etc/apt/sources.list.d/dotdeb.list && \
     curl http://www.dotdeb.org/dotdeb.gpg | apt-key add -
