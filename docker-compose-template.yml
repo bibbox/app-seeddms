@@ -7,7 +7,7 @@ networks:
 services:
 
   §§INSTANCE-seeddms:
-    image: bibbox/seeddms:5.1.5
+    image: bibbox/seeddms
     container_name:  §§INSTANCE-seeddms
     restart: unless-stopped
     networks:
