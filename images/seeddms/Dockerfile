@@ -59,3 +59,4 @@ COPY configs/settings.xml /var/www/seeddms51x/seeddms-$SEEDDMS_VERSION/conf/sett
 RUN chown -R www-data:www-data /var/www/seeddms51x/
 
 RUN touch /var/www/seeddms51x/seeddms-$SEEDDMS_VERSION/conf/ENABLE_INSTALL_TOOL
+
