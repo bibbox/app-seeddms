@@ -23,7 +23,7 @@ services:
       - §§INSTANCE-seeddms-data
 
   §§INSTANCE-seeddms-db:
-    image: mysql:8
+    image: mysql:8.0
     container_name: §§INSTANCE-seeddms-db
     restart: unless-stopped
     networks:
