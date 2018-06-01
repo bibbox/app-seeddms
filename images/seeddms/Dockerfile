@@ -3,12 +3,14 @@
 # VERSION 1.1
 #
 
-FROM php:7.0-apache
+FROM php:7.0-apache-jessie
 MAINTAINER Heimo Müller
 
 ENV SEEDDMS_VERSION=5.1.7
 ENV LUCENE_VERSION=1.1.12
 ENV PREVIEW_VERSION=1.2.8
+
+RUN apt-get update && apt-get install -y apt-utils && apt-get install -my wget gnupg
 
 RUN echo 'deb http://packages.dotdeb.org jessie all' > /etc/apt/sources.list.d/dotdeb.list && \
     curl http://www.dotdeb.org/dotdeb.gpg | apt-key add -
@@ -16,14 +18,13 @@ RUN echo 'deb http://packages.dotdeb.org jessie all' > /etc/apt/sources.list.d/d
 RUN rm /etc/apt/preferences.d/no-debian-php && \
     apt-get update && \
     apt-get -q -y install \
-        libpng12-dev \
+        libpng-dev \
         imagemagick \
         libmcrypt-dev \
         php-pear \
         poppler-utils \
         catdoc \
         curl \
-        php7.0-gd \
         php7.0-json \
         php7.0-ldap \
         php7.0-mbstring \
@@ -34,7 +35,7 @@ RUN rm /etc/apt/preferences.d/no-debian-php && \
         php7.0-zip \
         php7.0-soap \
         mysql-client \
-        libmysqlclient-dev
+          libmysqlclient-dev
 
 RUN docker-php-ext-install gd mysqli pdo pdo_mysql
 
