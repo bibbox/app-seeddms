@@ -23,7 +23,7 @@ services:
       - §§INSTANCE-seeddms-data
 
   §§INSTANCE-seeddms-db:
-    image: mysql:8
+    image: mariadb
     container_name: §§INSTANCE-seeddms-db
     restart: unless-stopped
     networks:
@@ -43,5 +43,5 @@ services:
     image: busybox
     container_name: §§INSTANCE-seeddms-data
     volumes:
-      - ./var/lib/mysql:/var/lib/mysql
-      - ./var/www/seeddms51x/data:/var/www/seeddms51x/data
+      - .data/var/lib/mysql:/var/lib/mysql
+      - .data/var/www/seeddms51x/data:/var/www/seeddms51x/data
