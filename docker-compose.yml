@@ -3,7 +3,7 @@ version: '2'
 services:
 
   bibbox-seeddms:
-    image: bibbox/seeddms:5.1.5
+    image: bibbox/seeddms
     container_name:  bibbox-seeddms
     links:
       - bibbox-seeddms-db:seeddms-db

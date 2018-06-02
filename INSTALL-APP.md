@@ -42,7 +42,7 @@ Click on **Delete the ENABLE_INSTALL_TOOL if possible**.
         
 * Backup the data directory 
     
-        /opt/bibbox/application-instance/APPID-app-seeddms/var/www/seeddms51x
+        /opt/bibbox/application-instance/APPID-app-seeddms/data/var/www/seeddms51x
         
 * Backup the mysql database with the command
        
