@@ -3,7 +3,7 @@
 This container can be installed as [BIBBOX APP](http://bibbox.readthedocs.io/en/latest/admin-documentation/ "BIBBOX App Store") or standalone. 
 
 * initial user/passwordd: **admin / admin**
-* after the docker installation follow these [instructions](INSTALL-APP.md)
+* after the docker installation follow these [instructions](https://github.com/bibbox/app-seeddms/blob/master/INSTALL-APP.md)
 
 ## Standalone Installation
 
