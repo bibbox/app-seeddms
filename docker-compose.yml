@@ -3,7 +3,7 @@ version: '2'
 services:
 
   bibbox-seeddms:
-    image: bibbox/seeddms:6.0.11
+    image: bibbox/seeddms:5.1.5
     container_name:  bibbox-seeddms
     links:
       - bibbox-seeddms-db:seeddms-db
@@ -34,4 +34,4 @@ services:
     container_name: bibbox-seeddms-data
     volumes:
       - ./data/var/lib/mysql:/var/lib/mysql
-      - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data
+      - ./data/var/www/html/seeddms51x/data:/var/www/html/seeddms51x/data
