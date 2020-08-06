@@ -34,4 +34,4 @@ services:
     container_name: bibbox-seeddms-data
     volumes:
       - ./data/var/lib/mysql:/var/lib/mysql
-      - ./data/var/www/seeddms51x/data:/var/www/seeddms51x/data
+      - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data
