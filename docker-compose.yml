@@ -19,7 +19,7 @@ services:
 #      - ./data/var/lib/mysql:/var/lib/mysql
       - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data
     env_file: 
-      - a.env 
+      - env_params.env 
 
   bibbox-seeddms-db:
     image: mariadb
@@ -38,7 +38,7 @@ services:
 #    depends_on:
 #      - ${INSTANCE}-seeddms-data
     env_file: 
-      - a.env 
+      - env_params.env 
 
 #  bibbox-seeddms-data:
 #    image: busybox
