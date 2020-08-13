@@ -4,7 +4,7 @@ services:
 
   bibbox-seeddms:
     image: bibbox/seeddms:6.0.11
-    container_name:  bibbox-seeddms
+    container_name:  bibbox-seeddms_tng
     links:
       - bibbox-seeddms-db:seeddms-db
     ports:
@@ -17,7 +17,7 @@ services:
 
   bibbox-seeddms-db:
     image: mariadb
-    container_name: bibbox-seeddms-db
+    container_name: bibbox-seeddms-db_tng
     user: root
     environment:
       - MYSQL_ROOT_PASSWORD=bibbox
@@ -31,7 +31,7 @@ services:
 
   bibbox-seeddms-data:
     image: busybox
-    container_name: bibbox-seeddms-data
+    container_name: bibbox-seeddms-data_tng
     volumes:
       - ./data/var/lib/mysql:/var/lib/mysql
       - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data
