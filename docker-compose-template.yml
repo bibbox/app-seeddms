@@ -1,0 +1,47 @@
+version: '2'
+
+networks:
+    bibbox-default-network:
+      external: true
+      
+services:
+
+  §§INSTANCE-seeddms:
+    image: bibbox/seeddms
+    container_name:  §§INSTANCE-seeddms
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
+    links:
+      - §§INSTANCE-seeddms-db:seeddms-db
+    ports:
+      - "§§PORT:80"
+    depends_on:
+      - §§INSTANCE-seeddms-db
+      - §§INSTANCE-seeddms-data
+    volumes_from: 
+      - §§INSTANCE-seeddms-data
+
+  §§INSTANCE-seeddms-db:
+    image: mariadb
+    container_name: §§INSTANCE-seeddms-db
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
+    user: root
+    environment:
+      - MYSQL_ROOT_PASSWORD=§§MYSQL_ROOT_PASSWORD
+      - MYSQL_DATABASE=seeddms
+      - MYSQL_USER=seeddms
+      - MYSQL_PASSWORD=§§MYSQL_USER_PASSWORD
+    volumes_from: 
+      - §§INSTANCE-seeddms-data
+    depends_on:
+      - §§INSTANCE-seeddms-data
+
+  §§INSTANCE-seeddms-data:
+    image: busybox
+    container_name: §§INSTANCE-seeddms-data
+    volumes:
+      - ./data/var/lib/mysql:/var/lib/mysql
+      - ./data/var/www/seeddms51x/data:/var/www/seeddms51x/data
