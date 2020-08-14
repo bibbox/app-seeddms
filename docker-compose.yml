@@ -3,24 +3,6 @@ version: '3.8'
 
 services:
 
-  bibbox-seeddms:
-    image: bibbox/seeddms:6.0.11
-    container_name:  ${INSTANCE}-seeddms_tng
-    links:
-      - ${INSTANCE}-seeddms-db:seeddms-db
-    ports:
-      - "8065:80"
-    depends_on:
-      - ${INSTANCE}-seeddms-db
-#      - ${INSTANCE}-seeddms-data
-#    volumes_from: 
-#      - ${INSTANCE}-seeddms-data
-    volumes:
-#      - ./data/var/lib/mysql:/var/lib/mysql
-      - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data
-    env_file: 
-      - env_params.env 
-
   bibbox-seeddms-db:
     image: mariadb
     container_name: ${INSTANCE}-seeddms-db_tng
@@ -37,6 +19,25 @@ services:
 #      - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data
 #    depends_on:
 #      - ${INSTANCE}-seeddms-data
+    env_file: 
+      - env_params.env 
+
+
+  bibbox-seeddms:
+    image: bibbox/seeddms:6.0.11
+    container_name:  ${INSTANCE}-seeddms_tng
+    links:
+      - ${INSTANCE}-seeddms-db:seeddms-db
+    ports:
+      - "8065:80"
+    depends_on:
+      - ${INSTANCE}-seeddms-db
+#      - ${INSTANCE}-seeddms-data
+#    volumes_from: 
+#      - ${INSTANCE}-seeddms-data
+    volumes:
+#      - ./data/var/lib/mysql:/var/lib/mysql
+      - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data
     env_file: 
       - env_params.env 
 
