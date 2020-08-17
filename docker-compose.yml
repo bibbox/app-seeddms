@@ -5,7 +5,7 @@ services:
 
   bibbox-seeddms-db:
     image: mariadb
-    container_name: bibboxtng-seeddms-db_tng
+    container_name: bibbox-seeddms-db_tng
     user: root
     environment:
       - MYSQL_ROOT_PASSWORD=bibbox
@@ -25,13 +25,13 @@ services:
 
   bibbox-seeddms:
     image: bibbox/seeddms:6.0.11
-    container_name:  bibboxtng-seeddms_tng
+    container_name:  bibbox-seeddms_tng
     links:
-      - bibboxtng-seeddms-db:seeddms-db
+      - bibbox-seeddms-db:seeddms-db
     ports:
       - "8065:80"
     depends_on:
-      - bibboxtng-seeddms-db
+      - bibbox-seeddms-db
 #      - ${INSTANCE}-seeddms-data
 #    volumes_from: 
 #      - ${INSTANCE}-seeddms-data
