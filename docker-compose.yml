@@ -1,5 +1,8 @@
 version: '3.8'
 
+networks:
+    bibbox-default-network:
+      external: true
 
 services:
 
@@ -16,6 +19,8 @@ services:
 #      - ${INSTANCE}-seeddms-data
     volumes:
       - ./data/var/lib/mysql:/var/lib/mysql
+    networks:
+      - bibbox-default-network
 #      - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data
 #    depends_on:
 #      - ${INSTANCE}-seeddms-data
@@ -37,7 +42,9 @@ services:
 #      - ${INSTANCE}-seeddms-data
     volumes:
 #      - ./data/var/lib/mysql:/var/lib/mysql
-      - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data
+      - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data 
+    networks:
+      - bibbox-default-network
     env_file: 
       - env_params.env 
 
