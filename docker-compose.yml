@@ -29,7 +29,7 @@ services:
     links:
       - bibbox-seeddms-db:seeddms-db
     ports:
-      - "8065:80"
+      - "80"
     depends_on:
       - bibbox-seeddms-db
 #      - ${INSTANCE}-seeddms-data
