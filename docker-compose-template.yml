@@ -1,0 +1,58 @@
+version: '3.8'
+
+networks:
+    bibbox-default-network:
+      external: true
+
+services:
+
+  bibbox-seeddms-db:
+    image: mariadb
+    container_name: §§INSTANCE-seeddms-db_tng
+    user: root
+    environment:
+      - MYSQL_ROOT_PASSWORD=bibbox
+      - MYSQL_DATABASE=seeddms
+      - MYSQL_USER=seeddms
+      - MYSQL_PASSWORD=seeddms4bibbox
+#    volumes_from: 
+#      - ${INSTANCE}-seeddms-data
+    volumes:
+      - ./data/var/lib/mysql:/var/lib/mysql
+    networks:
+      - bibbox-default-network
+#      - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data
+#    depends_on:
+#      - ${INSTANCE}-seeddms-data
+    env_file: 
+      - env_params.env 
+
+
+  bibbox-seeddms:
+    image: bibbox/seeddms:6.0.11
+    container_name:  §§INSTANCE-seeddms_tng
+    links:
+      - bibbox-seeddms-db:seeddms-db
+    ports:
+      - "80"
+    depends_on:
+      - bibbox-seeddms-db
+#      - ${INSTANCE}-seeddms-data
+#    volumes_from: 
+#      - ${INSTANCE}-seeddms-data
+    volumes:
+#      - ./data/var/lib/mysql:/var/lib/mysql
+      - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data 
+    networks:
+      - bibbox-default-network
+    env_file: 
+      - env_params.env 
+
+#  bibbox-seeddms-data:
+#    image: busybox
+#    container_name: ${INSTANCE}-seeddms-data_tng
+#    volumes:
+#      - ./data/var/lib/mysql:/var/lib/mysql
+#      - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data
+#    env_file: 
+#      - a.env 
