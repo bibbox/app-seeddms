@@ -32,7 +32,7 @@ services:
     image: bibbox/seeddms:6.0.11
     container_name:  §§INSTANCE-seeddms_tng
     links:
-      - bibbox-seeddms-db:seeddms-db
+      - §§INSTANCE-seeddms-db:seeddms-db
     ports:
       - "80"
     depends_on:
