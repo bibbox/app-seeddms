@@ -36,7 +36,7 @@ services:
     ports:
       - "80"
     depends_on:
-      - bibbox-seeddms-db
+      - §§INSTANCE-seeddms-db
 #      - ${INSTANCE}-seeddms-data
 #    volumes_from: 
 #      - ${INSTANCE}-seeddms-data
