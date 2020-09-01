@@ -11,10 +11,10 @@ services:
     container_name: §§INSTANCE-seeddms-db_tng
     user: root
     environment:
-      - MYSQL_ROOT_PASSWORD=bibbox
-      - MYSQL_DATABASE=seeddms
-      - MYSQL_USER=seeddms
-      - MYSQL_PASSWORD=seeddms4bibbox
+      - MYSQL_ROOT_PASSWORD=${MYSQLROOTPASSWORD}
+      - MYSQL_DATABASE=${MYSQLDATABASE}
+      - MYSQL_USER=${MYSQLUSER}
+      - MYSQL_PASSWORD=${MYSQLPASSWORD}
 #    volumes_from: 
 #      - ${INSTANCE}-seeddms-data
     volumes:
