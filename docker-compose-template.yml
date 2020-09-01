@@ -25,7 +25,7 @@ services:
 #    depends_on:
 #      - ${INSTANCE}-seeddms-data
     env_file: 
-      - env_param.env 
+      - env_params.env 
 
 
   §§INSTANCE-seeddms:
@@ -46,7 +46,7 @@ services:
     networks:
       - bibbox-default-network
     env_file: 
-      - env_param.env 
+      - env_params.env 
 
 #  bibbox-seeddms-data:
 #    image: busybox
