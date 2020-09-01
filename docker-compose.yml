@@ -15,15 +15,10 @@ services:
       - MYSQL_DATABASE=${MYSQLDATABASE}
       - MYSQL_USER=${MYSQLUSER}
       - MYSQL_PASSWORD=${MYSQLPASSWORD}
-#    volumes_from: 
-#      - ${INSTANCE}-seeddms-data
     volumes:
       - ./data/var/lib/mysql:/var/lib/mysql
     networks:
       - bibbox-default-network
-#      - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data
-#    depends_on:
-#      - ${INSTANCE}-seeddms-data
     env_file: 
       - .env 
 
@@ -37,11 +32,7 @@ services:
       - "80"
     depends_on:
       - §§INSTANCE-seeddms-db
-#      - ${INSTANCE}-seeddms-data
-#    volumes_from: 
-#      - ${INSTANCE}-seeddms-data
     volumes:
-#      - ./data/var/lib/mysql:/var/lib/mysql
       - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data 
     networks:
       - bibbox-default-network
