@@ -20,7 +20,7 @@ services:
     networks:
       - bibbox-default-network
     env_file: 
-      - ./env_params.env 
+      - .env 
 
 
   bibbox-seeddms:
@@ -29,7 +29,7 @@ services:
     links:
       - ${INSTANCE}-seeddms-db:seeddms-db
     ports:
-      - "8010:80"
+      - "${PORT}:80"
     depends_on:
       - ${INSTANCE}-seeddms-db
     volumes:
@@ -37,4 +37,4 @@ services:
     networks:
       - bibbox-default-network
     env_file: 
-      - ./env_params.env 
+      - .env 
