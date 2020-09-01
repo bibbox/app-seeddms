@@ -20,7 +20,7 @@ services:
     networks:
       - bibbox-default-network
     env_file: 
-      - .env 
+      - param.env 
 
 
   bibbox-seeddms:
@@ -37,4 +37,4 @@ services:
     networks:
       - bibbox-default-network
     env_file: 
-      - .env 
+      - param.env 
