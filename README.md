@@ -40,9 +40,9 @@ After BIBBOX is up and running, you can use the [BIBBOX APP Store](http://bibbox
   * MYSQL_PASSWORD = mysql user password used in the setup of seeddms, for testing you can stay with `seeddms4bibbox`
   
 The default values for the standalone installation are:
-  *MYSQL_ROOT_PASSWORD=seeddms
-  *MYSQL_DATABASE=seeddms
-  *MYSQL_USER=seeddms
-  *MYSQL_PASSWORD=seeddms
-  *INSTANCE=bibbox
-  *PORT=8020
+  * MYSQL_ROOT_PASSWORD=seeddms
+  * MYSQL_DATABASE=seeddms
+  * MYSQL_USER=seeddms
+  * MYSQL_PASSWORD=seeddms
+  * INSTANCE=bibbox
+  * PORT=8020
