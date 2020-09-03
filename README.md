@@ -14,6 +14,7 @@ Follow the instructions on https://docs.docker.com/compose/install/ to install t
 * Docker:   
 Update apt-get wit the commands:
 `apt-get update`
+
 `apt install docker.io`
 
 Maybe it is required to install the modules curl and git first. This modules can also be installed with apt-get install command.
