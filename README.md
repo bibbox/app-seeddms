@@ -15,6 +15,8 @@ Clone the github repsoitory and start the install.sh. If necessary change the po
 
 `source install.sh`
 
+`open localhost:8065/install`
+
 
 ## Install within BIBBOX
 
