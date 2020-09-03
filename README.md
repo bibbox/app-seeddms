@@ -1,5 +1,3 @@
-# app-seeddmsTNG
-The new app version of seeddms
 
 # SeedDMS BIBBOX application
 
