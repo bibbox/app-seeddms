@@ -13,9 +13,9 @@ Clone the github repsoitory and start the install.sh. If necessary change the po
 
 `cd app-seeddms'
 
-`chmod +x install.sh`
+`install.sh`
 
-`./install.sh`
+`source install.sh`
 
 
 ## Install within BIBBOX
