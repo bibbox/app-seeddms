@@ -13,6 +13,7 @@ First install required packages. These are:
 Follow the instructions on https://docs.docker.com/compose/install/ to install the latest version of docker-compose
 * Docker:   
 Update apt-get wit the commands:
+
 `apt-get update`
 
 `apt install docker.io`
