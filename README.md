@@ -9,9 +9,9 @@ This container can be installed as [BIBBOX APP](http://bibbox.readthedocs.io/en/
 ## Standalone Installation
 First install required packages. These are:
 
-* Docker-Compose
+* Docker-Compose:   
 Follow the instructions on https://docs.docker.com/compose/install/ to install the latest version of docker-compose
-* Docker 
+* Docker:   
 Update apt-get wit the commands:
 `apt-get update`
 `apt install docker.io`
