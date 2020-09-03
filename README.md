@@ -13,8 +13,6 @@ Clone the github repsoitory and start the install.sh. If necessary change the po
 
 `cd app-seeddms`
 
-`install.sh`
-
 `source install.sh`
 
 
