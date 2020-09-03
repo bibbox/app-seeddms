@@ -29,7 +29,7 @@ services:
     links:
       - ${INSTANCE}-seeddms-db:seeddms-db
     ports:
-      - "${PORT}:80"
+      - "${PORT}80"
     depends_on:
       - ${INSTANCE}-seeddms-db
     volumes:
