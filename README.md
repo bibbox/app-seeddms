@@ -16,11 +16,13 @@ Update apt-get wit the commands:
 
 `apt-get update`
 
+`apt-get install git`
+
+`apt-get install curl`
+
 `apt install docker.io`
 
-Maybe it is required to install the modules curl and git first. This modules can also be installed with apt-get install command.
-
-Clone the github repsoitory and start the install.sh. If necessary change the ports and volume mounts in `docker-compose.yml`.  
+Clone the github repsoitory and start the install.sh. If necessary change the ports in the environment file .env and the volume mounts in `docker-compose.yml`.  
 
 `sudo git clone https://github.com/bibbox/app-seeddmsTNG`
 
