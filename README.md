@@ -9,11 +9,11 @@ This container can be installed as [BIBBOX APP](http://bibbox.readthedocs.io/en/
 
 Clone the github repsoitory and start the install.sh. If necessary change the ports and volume mounts in `docker-compose.yml`.  
 
-'git clone https://github.com/bibbox/app-seeddms`
+`git clone https://github.com/bibbox/app-seeddms`
 
 `cd app-seeddms'
 
-'chmod +x install.sh`
+`chmod +x install.sh`
 
 `./install.sh`
 
