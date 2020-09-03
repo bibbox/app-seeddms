@@ -22,7 +22,9 @@ Update apt-get wit the commands:
 
 `apt install docker.io`
 
-Clone the github repsoitory and start the install.sh. If necessary change the ports in the environment file .env and the volume mounts in `docker-compose.yml`.  
+Clone the github repsoitory and start the install.sh. If necessary change the ports in the environment file .env and the volume mounts in `docker-compose.yml`. 
+
+To install the app locally execute the commands:
 
 `sudo git clone https://github.com/bibbox/app-seeddmsTNG`
 
