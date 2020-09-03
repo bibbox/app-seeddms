@@ -29,7 +29,6 @@ After BIBBOX is up and running, you can use the [BIBBOX APP Store](http://bibbox
 ## Docker Images in the Aoo
  * [bibbox/seeddms](https://hub.docker.com/r/bibbox/seeddms/) 
  * [mariaDB](https://hub.docker.com/_/mariadb/), offical mariaDB container
- * [busybox](https://hub.docker.com/_/busybox/), offical data container
  
 ## Install Environment Variables
   *	MYSQL_ROOT_PASSWORD = password, only used within the docker container
