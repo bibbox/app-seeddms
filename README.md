@@ -11,7 +11,7 @@ Clone the github repsoitory and start the install.sh. If necessary change the po
 
 `git clone https://github.com/bibbox/app-seeddms`
 
-`cd app-seeddms'
+`cd app-seeddms`
 
 `install.sh`
 
