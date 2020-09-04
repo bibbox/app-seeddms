@@ -56,4 +56,4 @@ The default values for the standalone installation are:
   * MYSQL_USER=seeddms
   * MYSQL_PASSWORD=seeddms
   * INSTANCE=bibbox
-  * PORT=8020
+  * PORT=8065
