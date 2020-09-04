@@ -6,9 +6,7 @@ This container can be installed as [BIBBOX APP](http://bibbox.readthedocs.io/en/
 * initial user/passwordd: **admin / admin**
 * after the docker installation follow these [instructions](https://github.com/bibbox/app-seeddms/blob/master/INSTALL-APP.md)
 
-## Standalone Installation
-
-If necessary change the ports in the environment file .env and the volume mounts in `docker-compose.yml`. 
+## Standalone Installation 
 
 To install the app locally execute the commands:
 
@@ -26,7 +24,11 @@ To install the app locally execute the commands:
 
 `docker-compose up -d`
 
-After the Installation open "localhost:8020/install/install.php" in browser to set up SeedDMS
+After the Installation open "localhost:8065/install/install.php" in browser to set up SeedDMS.
+
+The dafault port of the app SeedDMS is 8065.
+
+If necessary change the ports in the environment file .env and the volume mounts in `docker-compose.yml`.
 
 
 ## Install within BIBBOX
