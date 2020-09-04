@@ -8,15 +8,25 @@ This container can be installed as [BIBBOX APP](http://bibbox.readthedocs.io/en/
 
 ## Standalone Installation
 
-Clone the github repsoitory and start the install.sh. If necessary change the ports in the environment file .env and the volume mounts in `docker-compose.yml`. 
+If necessary change the ports in the environment file .env and the volume mounts in `docker-compose.yml`. 
 
 To install the app locally execute the commands:
 
 `sudo git clone https://github.com/bibbox/app-seeddmsTNG`
 
-`sudo chmod +x install.sh`
+`cd app-seeddmsTNG`
 
-`sudo ./install.sh`
+`mkdir -p data/var/lib/mysql`
+
+`mkdir -p data/var/www/seeddms60x/data/lucene`
+
+`mkdir -p data/var/www/seeddms60x/data/staging`
+
+`docker network create bibbox-default-network`
+
+`docker-compose up -d`
+
+After the Installation open "localhost:8020/install/install.php" in browser to set up SeedDMS
 
 
 ## Install within BIBBOX
