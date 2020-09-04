@@ -7,20 +7,6 @@ This container can be installed as [BIBBOX APP](http://bibbox.readthedocs.io/en/
 * after the docker installation follow these [instructions](https://github.com/bibbox/app-seeddms/blob/master/INSTALL-APP.md)
 
 ## Standalone Installation
-First install required packages. These are:
-
-* Docker-Compose:   
-Follow the instructions on https://docs.docker.com/compose/install/ to install the latest version of docker-compose
-* Docker:   
-Update apt-get wit the commands:
-
-`apt-get update`
-
-`apt-get install git`
-
-`apt-get install curl`
-
-`apt install docker.io`
 
 Clone the github repsoitory and start the install.sh. If necessary change the ports in the environment file .env and the volume mounts in `docker-compose.yml`. 
 
