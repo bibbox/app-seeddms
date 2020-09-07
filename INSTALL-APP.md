@@ -6,7 +6,7 @@
 
 ![SCREEN1](screen-01.jpg)
 
-* From the current URL navigate to **/install** through the browser's address bar. Here you will find the installers welcome page. Klick on **Start installation**.
+* From the current URL navigate to **/install/install.php** through the browser's address bar. Here you will find the installers welcome page. Klick on **Start installation**.
 
 ![SCREEN2](screen-02.jpg)
 
