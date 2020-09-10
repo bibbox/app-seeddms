@@ -6,7 +6,7 @@ networks:
 
 services:
 
-  bibbox-seeddms:
+  §§INSTANCE-seeddms:
     image: bibbox/seeddms:6.0.11
     container_name:  §§INSTANCE-seeddms_tng
     links:
@@ -20,7 +20,7 @@ services:
     networks:
       - bibbox-default-network
       
-  bibbox-seeddms-db:
+  §§INSTANCE-seeddms-db:
     image: mariadb
     container_name: §§INSTANCE-seeddms-db_tng
     user: root
