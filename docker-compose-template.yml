@@ -14,7 +14,7 @@ services:
     ports:
       - "80"
     depends_on:
-      - §§INSTANCE-seeddms-db_tng
+      - §§INSTANCE-seeddms-db
     volumes:
       - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data 
     networks:
