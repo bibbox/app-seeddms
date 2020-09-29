@@ -16,7 +16,7 @@ services:
     depends_on:
       - §§INSTANCE-seeddms-db
     volumes:
-      - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data:rwx
+      - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data
     networks:
       - bibbox-default-network
       
@@ -30,7 +30,7 @@ services:
       - MYSQL_USER=§§MYSQLUSER
       - MYSQL_PASSWORD=§§MYSQLPASSWORD
     volumes:
-      - ./data/var/lib/mysql:/var/lib/mysql:rwx
+      - ./data/var/lib/mysql:/var/lib/mysql
     networks:
       - bibbox-default-network
 
