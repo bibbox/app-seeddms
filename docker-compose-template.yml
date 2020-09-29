@@ -23,7 +23,7 @@ services:
   §§INSTANCE-seeddms-db:
     image: mariadb
     container_name: §§INSTANCE-seeddms-db_tng
-    user: root
+    user: v
     environment:
       - MYSQL_ROOT_PASSWORD=§§MYSQLROOTPASSWORD
       - MYSQL_DATABASE=§§MYSQLDATABASE
