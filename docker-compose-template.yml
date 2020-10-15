@@ -6,29 +6,30 @@ networks:
 
 services:
 
-  §§INSTANCE-seeddms:
+  seeddms-seeddms:
     image: bibbox/seeddms:6.0.11
-    container_name:  §§INSTANCE-seeddms_tng
+    container_name:  seeddms-seeddms_tng
     links:
-      - §§INSTANCE-seeddms-db:seeddms-db
+      - seeddms-seeddms-db:seeddms-db
     ports:
       - "80"
     depends_on:
-      - §§INSTANCE-seeddms-db
+      - seeddms-seeddms-db
     volumes:
       - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data:rw
+      - ./settings/settings.xml:/var/www/seeddms60x/conf/settings.xml
     networks:
       - bibbox-default-network
       
-  §§INSTANCE-seeddms-db:
+  seeddms-seeddms-db:
     image: mariadb
-    container_name: §§INSTANCE-seeddms-db_tng
+    container_name: seeddms-seeddms-db_tng
     user: root
     environment:
-      - MYSQL_ROOT_PASSWORD=§§MYSQLROOTPASSWORD
-      - MYSQL_DATABASE=§§MYSQLDATABASE
-      - MYSQL_USER=§§MYSQLUSER
-      - MYSQL_PASSWORD=§§MYSQLPASSWORD
+      - MYSQL_ROOT_PASSWORD=bibbox
+      - MYSQL_DATABASE=seeddms
+      - MYSQL_USER=seeddms
+      - MYSQL_PASSWORD=seeddms4bibbox
     volumes:
       - ./data/var/lib/mysql:/var/lib/mysql:rw
     networks:
