@@ -17,7 +17,7 @@ services:
       - §§INSTANCE-seeddms-db
     volumes:
       - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data:rw
-      - ./settings/settings-template.xml:/var/www/seeddms60x/conf/settings.xml
+      - ./settings/settings-template.xml:/var/www/seeddms60x/conf/settings.xml:ro
     networks:
       - bibbox-default-network
       
