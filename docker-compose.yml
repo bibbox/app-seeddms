@@ -33,7 +33,8 @@ services:
     depends_on:
       - ${INSTANCE}-seeddms-db
     volumes:
-      - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data 
+      - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data
+      - ./settings/settings-local.xml:/var/www/seeddms60x/conf/settings.xml:ro
     networks:
       - bibbox-default-network
     env_file: 
