@@ -20,6 +20,8 @@ services:
       - ./settings/settings.xml:/var/www/seeddms60x/conf/settings.xml
     networks:
       - bibbox-default-network
+    environment:
+      - INSTANCENAME=§§INSTANCE
       
   §§INSTANCE-seeddms-db:
     image: mariadb
