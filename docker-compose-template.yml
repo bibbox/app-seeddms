@@ -21,7 +21,7 @@ services:
     networks:
       - bibbox-default-network
     environment:
-      - INSTANCENAME=§§INSTANCE
+      - _httpRoot="/§§INSTANCE/"
       
   §§INSTANCE-seeddms-db:
     image: mariadb
