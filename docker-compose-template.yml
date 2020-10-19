@@ -7,7 +7,7 @@ networks:
 services:
 
   §§INSTANCE-seeddms:
-    build: .
+    image: bibbox/seeddms:6.0.11
     container_name:  §§INSTANCE-seeddms_tng
     links:
       - §§INSTANCE-seeddms-db:seeddms-db
@@ -17,7 +17,7 @@ services:
       - §§INSTANCE-seeddms-db
     volumes:
       - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data:rw
-#      - ./settings/settings.xml:/var/www/seeddms60x/conf/settings.xml
+      - ./settings/settings.xml:/var/www/seeddms60x/conf/settings.xml
     networks:
       - bibbox-default-network
     environment:
