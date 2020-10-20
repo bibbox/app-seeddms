@@ -51,7 +51,7 @@
        - dropFolderDir: where files for document upload are located
        - cacheDir: where the preview images are saved
     -->
-    <server rootDir="/var/www/seeddms60x/www/" httpRoot="/§§INSTANCENAME/" contentDir="/var/www/seeddms60x/data/" stagingDir="/var/www/seeddms60x/data/staging/" luceneDir="/var/www/seeddms60x/data/lucene/" logFileEnable="true" logFileRotation="d" enableLargeFileUpload="false" partitionSize="2000000" cacheDir="/var/www/seeddms60x/data/cache/" dropFolderDir="">
+    <server rootDir="/var/www/seeddms60x/www/" httpRoot="/seeddms12/" contentDir="/var/www/seeddms60x/data/" stagingDir="/var/www/seeddms60x/data/staging/" luceneDir="/var/www/seeddms60x/data/lucene/" logFileEnable="true" logFileRotation="d" enableLargeFileUpload="false" partitionSize="2000000" cacheDir="/var/www/seeddms60x/data/cache/" dropFolderDir="">
     </server>
     
     <!-- enableGuestLogin: If you want anybody to login as guest, set the following line to true
