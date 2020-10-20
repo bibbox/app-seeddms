@@ -6,7 +6,7 @@
 FROM php:7.0-apache-jessie
 MAINTAINER Heimo Müller
 
-ENV SEEDDMS_VERSION=6.0.12
+ENV SEEDDMS_VERSION=6.0.11
 
 RUN apt-get update && apt-get install -y apt-utils && apt-get install -my wget gnupg
 
