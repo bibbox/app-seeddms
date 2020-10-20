@@ -7,7 +7,7 @@
        - language: default language (name of a subfolder in folder "languages")
        - theme: default style (name of a subfolder in folder "styles")
     -->
-    <display siteName="SeedDMS" footNote="SeedDMS free document management system - www.seeddms.org" printDisclaimer="true" language="en_GB" theme="bootstrap" previewWidthList="40" previewWidthDetail="100">  
+    <display siteName="SeedDMS" footNote="SeedDMS free document management system - www.seeddms.org" printDisclaimer="true" language="en_GB" theme="bootstrap" previewWidthList="40" previewWidthDetail="100" availablelanguages="" showFullPreview="false" convertToPdf="false" onePageMode="" previewWidthMenuList="40" previewWidthDropFolderList="100" maxItemsPerPage="0" incItemsPerPage="0">  
     </display>
     <!-- strictFormCheck: Strict form checking. If set to true, then all fields in the form will be checked for a value. If set to false, then (most) comments and keyword fields become optional. Comments are always required when submitting a review or overriding document status.
        - viewOnlineFileTypes: files with one of the following endings can be viewed online (USE ONLY LOWER CASE CHARACTERS)
@@ -24,15 +24,15 @@
        - stopWordsFile: path to stop word file for indexer
        - sortUsersInList: how to sort users in lists ('fullname' or '' (default))
     -->   
-    <edition strictFormCheck="false" viewOnlineFileTypes=".txt;.text;.html;.htm;.xml;.pdf;.gif;.png;.jpg;.jpeg" enableConverting="true" enableEmail="true" enableUsersView="true" enableFullSearch="false" enableClipboard="false" enableFolderTree="true" expandFolderTree="1" enableLanguageSelector="true" stopWordsFile="" sortUsersInList="" enableDropUpload="false" enableRecursiveCount="false" maxRecursiveCount="0" enableThemeSelector="false" fullSearchEngine="lucene" sortFoldersDefault="u">
+    <edition strictFormCheck="false" viewOnlineFileTypes=".txt;.text;.html;.htm;.xml;.pdf;.gif;.png;.jpg;.jpeg" enableConverting="true" enableEmail="true" enableUsersView="true" enableFullSearch="false" enableClipboard="false" enableFolderTree="true" expandFolderTree="1" enableLanguageSelector="true" stopWordsFile="" sortUsersInList="" enableDropUpload="false" enableRecursiveCount="false" maxRecursiveCount="0" enableThemeSelector="false" fullSearchEngine="lucene" sortFoldersDefault="u" editOnlineFileTypes="" enableMenuTasks="false" enableHelp="false" defaultSearchMethod="database" libraryFolder="0" maxSizeForFullText="0" showSingleSearchHit="false" noDocumentFormFields="" enableSessionList="false" tasksInMenu="" enableDropFolderList="false" enableMultiUpload="false" defaultDocPosition="end">
     </edition> 
     <!-- enableCalendar: enable/disable calendar
        - calendarDefaultView: calendar default view ("w" for week,"m" for month,"y" for year)
        - firstDayOfWeek: first day of the week (0=sunday, 6=saturday)
     -->  
     <calendar enableCalendar="true" calendarDefaultView="y" firstDayOfWeek="0">
-    <webdav enableWebdavReplaceDoc="false"/></calendar>
-  </site>
+    </calendar>
+  <webdav enableWebdavReplaceDoc="false"/></site>
   
   <system>
     <!-- rootDir: Path to where SeedDMS is located
@@ -50,8 +50,9 @@
        - partitionsize: size of chunk uploaded by jumploader
        - dropFolderDir: where files for document upload are located
        - cacheDir: where the preview images are saved
+       - backupDir: where the backups are saved
     -->
-    <server rootDir="/var/www/seeddms60x/www/" httpRoot="/seeddms12/" contentDir="/var/www/seeddms60x/data/" stagingDir="/var/www/seeddms60x/data/staging/" luceneDir="/var/www/seeddms60x/data/lucene/" logFileEnable="true" logFileRotation="d" enableLargeFileUpload="false" partitionSize="2000000" cacheDir="/var/www/seeddms60x/data/cache/" dropFolderDir="">
+    <server rootDir="var/www/seeddms60x/www/" httpRoot="/seeddms12/" contentDir="/var/www/seeddms60x/data/" stagingDir="/var/www/seeddms60x/data/staging/" luceneDir="/var/www/seeddms60x/data/lucene/" logFileEnable="true" logFileRotation="d" enableLargeFileUpload="false" partitionSize="2000000" cacheDir="/var/www/seeddms60x/data/cache/" dropFolderDir="" backupDir="/var/www/seeddms60x/data/backup/" checkOutDir="" createCheckOutDir="false" repositoryUrl="" proxyUrl="" proxyUser="" proxyPassword="" maxUploadSize="" enableXsendfile="false">
     </server>
     
     <!-- enableGuestLogin: If you want anybody to login as guest, set the following line to true
@@ -66,7 +67,7 @@
 			 - passwordStrengthAlgorithm: algorithm used to calculate password strenght (simple or advanced)
 			 - encryptionKey: arbitrary string used for creating identifiers
     -->    
-    <authentication enableGuestLogin="false" enablePasswordForgotten="false" restricted="true" enableUserImage="false" disableSelfEdit="false" passwordStrength="0" passwordStrengthAlgorithm="simple" passwordExpiration="0" passwordHistory="0" loginFailure="0" autoLoginUser="0" quota="0" undelUserIds="" encryptionKey="cfecb42d13f2e1666cddde56991a2cbf" cookieLifetime="0">
+    <authentication enableGuestLogin="false" enablePasswordForgotten="false" restricted="true" enableUserImage="false" disableSelfEdit="false" passwordStrength="0" passwordStrengthAlgorithm="simple" passwordExpiration="10" passwordHistory="0" loginFailure="0" autoLoginUser="0" quota="0" undelUserIds="" encryptionKey="cfecb42d13f2e1666cddde56991a2cbf" cookieLifetime="0" enableGuestAutoLogin="false" defaultAccessDocs="0" enable2FactorAuthentication="false">
       <connectors>
         <!-- ***** CONNECTOR LDAP  *****
            - enable: enable/disable connector
@@ -96,19 +97,8 @@
        - dbDatabase: database where the tables for seeddms are stored (optional - see adodb-readme)
        - dbUser: username for database-access
        - dbPass: password for database-access
-    -->
-    <!--
-    <database dbDriver="sqlite" dbHostname="localhost" dbDatabase="/var/www/seeddms51x/data/content.db" dbUser="seeddms" dbPass="seeddms" doNotCheckVersion="false">
-    </database>
-    -->
-    <database
-      dbDriver = "mysql"
-      dbHostname = "seeddms-db:3306"
-      dbDatabase = "seeddms"
-      dbUser = "seeddms"
-      dbPass = "seeddms4bibbox"
-      doNotCheckVersion="false"
-    >
+    -->    
+    <database dbDriver="mysql" dbHostname="seeddms-db:3306" dbDatabase="seeddms" dbUser="seeddms" dbPass="seeddms4bibbox" doNotCheckVersion="false">
     </database>
     <!-- smtpServer: SMTP Server hostname
        - smtpPort: SMTP Server port
@@ -138,7 +128,7 @@
        - enableVersionModification: allow to modify versions after approval
        - enableDuplicateDocNames: allow duplicate names in a folder
     --> 
-    <edition enableAdminRevApp="false" versioningFileName="versioning_info.txt" workflowMode="traditional" enableVersionDeletion="true" enableVersionModification="true" enableDuplicateDocNames="true" enableOwnerRevApp="false" enableSelfRevApp="false" presetExpirationDate="" overrideMimeType="false">
+    <edition enableAdminRevApp="false" versioningFileName="versioning_info.txt" workflowMode="advanced" enableVersionDeletion="true" enableVersionModification="true" enableDuplicateDocNames="true" enableOwnerRevApp="false" enableSelfRevApp="false" presetExpirationDate="" overrideMimeType="false" initialDocumentStatus="2" enableAcknowledgeWorkflow="" enableRevisionWorkflow="false" advancedAcl="false" enableUpdateRevApp="false" removeFromDropFolder="false" enableSelfReceipt="false" enableAdminReceipt="false" enableOwnerReceipt="false" enableUpdateReceipt="false" enableFilterReceipt="false" enableReceiptWorkflow="false" enableReceiptReject="false" enableRevisionOneVoteReject="false" allowReviewerOnly="false" allowChangeRevAppInProcess="false" enableDuplicateSubFolderNames="false">
     </edition>
 		<!-- enableNotificationAppRev: true to send notifation if a user is added as a reviewer or approver
 		-->
@@ -155,9 +145,9 @@
        - updateNotifyTime: users are notified about document-changes that took place within the last "updateNotifyTime" seconds
        - extraPath: Path to addtional software. This is the directory containing additional software like the adodb directory, or the pear Log package. This path will be added to the php include path
     -->
-    <server coreDir="" luceneClassDir="" contentOffsetDir="1048576" maxDirID="0" updateNotifyTime="86400" extraPath="/var/www/seeddms60x/pear/" maxExecutionTime="30" cmdTimeout="1">
+    <server coreDir="" luceneClassDir="" contentOffsetDir="1048576" maxDirID="0" updateNotifyTime="86400" extraPath="/var/www/seeddms60x/pear/" maxExecutionTime="30" cmdTimeout="10" enableDebugMode="false">
     </server>
-    <converters>
+    <converters target="fulltext">
 		 <converter mimeType="application/pdf">pdftotext -nopgbrk %s - | sed -e 's/ [a-zA-Z0-9.]\{1\} / /g' -e 's/[0-9.]//g'</converter>
      <converter mimeType="application/msword">catdoc %s</converter>
      <converter mimeType="application/vnd.ms-excel">ssconvert -T Gnumeric_stf:stf_csv -S %s fd://1</converter>
@@ -168,4 +158,4 @@
 
   </advanced>
 
-<extensions/></configuration>
+<extensions><extension name="example" disable="true"><parameter name="__disable__">1</parameter></extension></extensions></configuration>
