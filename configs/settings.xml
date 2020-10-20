@@ -31,7 +31,7 @@
        - firstDayOfWeek: first day of the week (0=sunday, 6=saturday)
     -->  
     <calendar enableCalendar="true" calendarDefaultView="y" firstDayOfWeek="0">
-    </calendar>
+    <webdav enableWebdavReplaceDoc="false"/></calendar>
   </site>
   
   <system>
