@@ -19,6 +19,7 @@ services:
     volumes:
       - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data:rw
       - ./settings/settings.xml:/var/www/seeddms60x/conf/settings.xml
+      - ./configs/000-default.conf:/etc/apache2/sites-available/000-default.conf
     networks:
       - bibbox-default-network
     environment:
