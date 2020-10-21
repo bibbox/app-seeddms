@@ -8,7 +8,7 @@ services:
 
   §§INSTANCE-seeddms:
     build: .
-    image: bibbox/seeddms:6.0.11
+#    image: bibbox/seeddms:6.0.11
     container_name:  §§INSTANCE-seeddms_tng
     links:
       - §§INSTANCE-seeddms-db:seeddms-db
