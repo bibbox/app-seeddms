@@ -66,5 +66,5 @@ if(isset($GLOBALS['SEEDDMS_HOOKS']['initDMS'])) {
         }
 }
 
-require_once("inc/inc.Tasks.php");
+require_once("inc.Tasks.php");
 
