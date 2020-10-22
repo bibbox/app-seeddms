@@ -21,6 +21,8 @@ services:
       - ./settings/settings.xml:/var/www/seeddms60x/conf/settings.xml:ro
       - ./settings/out.Settings.php:/var/www/seeddms60x/seeddms-6.0.11/out/out.Settings.php
       - ./settings/inc.DBInit.php:/var/www/seeddms60x/seeddms-6.0.11/inc/inc.DBInit.php
+      - ./settings/inc.Tasks.php:/var/www/seeddms60x/seeddms-6.0.11/inc/inc.Tasks.php
+
     networks:
       - bibbox-default-network
     environment:
