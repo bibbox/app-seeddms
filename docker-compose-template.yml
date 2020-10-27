@@ -19,13 +19,13 @@ services:
       - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data:rw
 #      - ./configs/000-default.conf:/etc/apache2/sites-available/000-default.conf:ro
       - ./settings/settings.xml:/var/www/seeddms60x/conf/settings.xml
-      - ./settings/op.Login.php:/var/www/seeddms60x/seeddms/op/op.Login.php
-      - ./settings/inc.ClassSettings.php:/var/www/seeddms60x/seeddms/inc/inc.ClassSettings.php
-      - ./settings/inc.Utils.php:/var/www/seeddms60x/seeddms/inc/inc.Utils.php
-      - ./settings/op.Login.php:/var/www/seeddms60x/seeddms-6.0.11/op/op.Login.php
-      - ./settings/inc.ClassSettings.php:/var/www/seeddms60x/seeddms-6.0.11/inc/inc.ClassSettings.php
-      - ./settings/inc.Utils.php:/var/www/seeddms60x/seeddms-6.0.11/inc/inc.Utils.php
-      - ./settings/install.php:/var/www/seeddms60x/seeddms/install/install.php
+#      - ./settings/op.Login.php:/var/www/seeddms60x/seeddms/op/op.Login.php
+#      - ./settings/inc.ClassSettings.php:/var/www/seeddms60x/seeddms/inc/inc.ClassSettings.php
+#      - ./settings/inc.Utils.php:/var/www/seeddms60x/seeddms/inc/inc.Utils.php
+#      - ./settings/op.Login.php:/var/www/seeddms60x/seeddms-6.0.11/op/op.Login.php
+#      - ./settings/inc.ClassSettings.php:/var/www/seeddms60x/seeddms-6.0.11/inc/inc.ClassSettings.php
+#      - ./settings/inc.Utils.php:/var/www/seeddms60x/seeddms-6.0.11/inc/inc.Utils.php
+#      - ./settings/install.php:/var/www/seeddms60x/seeddms/install/install.php
 
 
     networks:
