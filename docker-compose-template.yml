@@ -22,7 +22,7 @@ services:
       - ./settings/op.Login.php:/var/www/seeddms60x/seeddms/op/op.Login.php
       - ./settings/inc.ClassSettings.php:/var/www/seeddms60x/seeddms/inc/inc.ClassSettings.php
       - ./settings/inc.Utils.php:/var/www/seeddms60x/seeddms/inc/inc.Utils.php
-      - ./settings/install.php:/var/www/seeddms60x/seeddms/install/install.php
+#      - ./settings/install.php:/var/www/seeddms60x/seeddms/install/install.php
 
 
     networks:
