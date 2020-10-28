@@ -6,3 +6,4 @@ chown -R www-data /var/www/seeddms60x/www/seeddms777/
 
 #tail -f /var/log/dpkg.log
 service apache2 start
+tail -f /var/log/dpkg.log
