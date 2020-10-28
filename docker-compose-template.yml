@@ -26,7 +26,7 @@ services:
 #      - ./settings/inc.ClassSettings.php:/var/www/seeddms60x/seeddms-6.0.11/inc/inc.ClassSettings.php
 #      - ./settings/inc.Utils.php:/var/www/seeddms60x/seeddms-6.0.11/inc/inc.Utils.php
 #      - ./settings/install.php:/var/www/seeddms60x/seeddms/install/install.php
-    entrypoint: sh /entrypoint.sh
+    command: sh /entrypoint.sh
 
 
     networks:
