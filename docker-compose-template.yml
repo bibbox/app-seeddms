@@ -28,7 +28,7 @@ services:
 #      - ./settings/install.php:/var/www/seeddms60x/seeddms/install/install.php
       - ./entrypoint.sh:/var/entrypoint.sh
 
-    entrypoint: ./var/entrypoint.sh
+    entrypoint: /var/entrypoint.sh
 
 
     networks:
