@@ -1,9 +1,13 @@
 #!/bin/bash
+file=/opt/dist/deployed.done
+if [ ! -f $file ] ; then
+  mkdir /var/www/seeddms60x/www/seeddms777/
+  cp -R /var/www/seeddms60x/seeddms/* /var/www/seeddms60x/www/seeddms777/
+  chown -R www-data:www-data /var/www/seeddms60x/www/seeddms777/
 
-mkdir /var/www/seeddms60x/www/seeddms777/
-cp -R /var/www/seeddms60x/seeddms/* /var/www/seeddms60x/www/seeddms777/
-chown -R www-data:www-data /var/www/seeddms60x/www/seeddms777/
-
-#tail -f /var/log/dpkg.log
-service apache2 start
-tail -f /var/log/dpkg.log
+  #tail -f /var/log/dpkg.log
+  service apache2 start
+  tail -f /var/log/dpkg.log
+  mkdir /opt/dist/
+  touch /opt/dist/deployed.done
+fi
