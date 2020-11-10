@@ -18,7 +18,7 @@ services:
       - §§INSTANCE-seeddms-db
     volumes:
       - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data:rw
-      - -/entrypoint.sh:/var/entrypoint.sh
+      - ./entrypoint.sh:/var/entrypoint.sh
     networks:
       - bibbox-default-network
     entrypoint:
