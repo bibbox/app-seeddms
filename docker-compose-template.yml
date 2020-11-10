@@ -9,6 +9,7 @@ services:
   §§INSTANCE-seeddms:
     image: bibbox/seeddms:6.0.11
     container_name:  §§INSTANCE-seeddms_tng
+    restart: unless-stopped
     links:
       - §§INSTANCE-seeddms-db:seeddms-db
     ports:
@@ -36,6 +37,7 @@ services:
   §§INSTANCE-seeddms-db:
     image: mariadb
     container_name: §§INSTANCE-seeddms-db_tng
+    restart: unless-stopped
     user: root
     environment:
       - MYSQL_ROOT_PASSWORD=§§MYSQLROOTPASSWORD
