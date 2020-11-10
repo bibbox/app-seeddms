@@ -9,7 +9,6 @@ services:
   §§INSTANCE-seeddms:
     image: bibbox/seeddms:6.0.11
     container_name:  §§INSTANCE-seeddms_tng
-    restart: unless-stopped
     links:
       - §§INSTANCE-seeddms-db:seeddms-db
     ports:
@@ -30,8 +29,6 @@ services:
 #     - ./entrypoint.sh:/var/entrypoint.sh
 
 #    entrypoint: /var/entrypoint.sh
-
-
     networks:
       - bibbox-default-network
 
