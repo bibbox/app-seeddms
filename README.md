@@ -53,4 +53,3 @@ The default values for the standalone installation are:
   * INSTANCE=bibbox
   * PORT=8065
   
-  After installation move to `http://localhost:PORT/install/install.php` to finish the installation, where PORT is the user defined port on localhost.
