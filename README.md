@@ -33,12 +33,7 @@ If necessary change the ports in the environment file .env and the volume mounts
 
 ## Install within BIBBOX
 
-The BIBBOX framework can be installed 
-* as a [virtual machine](http://bibbox.bbmri-eric.eu/resources/machine/), 
-* using [vagrant/puppet](http://bibbox.readthedocs.io/en/latest/installation-vagrant/) 
-* are on any Ubuntu System following these [instructions](http://bibbox.readthedocs.io/en/latest/installation-source/)  
-
-After BIBBOX is up and running, you can use the [BIBBOX APP Store](http://bibbox.readthedocs.io/en/latest/admin-documentation/ "BIBBOX App Store") to install a lot of software tools. 
+You can use the [BIBBOX APP Store](http://bibbox.readthedocs.io/en/latest/admin-documentation/ "BIBBOX App Store") to install a lot of software tools. 
 
 ## Docker Images in the Aoo
  * [bibbox/seeddms](https://hub.docker.com/r/bibbox/seeddms/) 
@@ -54,6 +49,8 @@ The default values for the standalone installation are:
   * MYSQL_ROOT_PASSWORD=seeddms
   * MYSQL_DATABASE=seeddms
   * MYSQL_USER=seeddms
-  * MYSQL_PASSWORD=seeddms
+  * MYSQL_PASSWORD=seeddms4bibbox
   * INSTANCE=bibbox
   * PORT=8065
+  
+  After installation move to `http://localhost:PORT/install/install.php` to finish the installation, where PORT is the user defined port on localhost.
