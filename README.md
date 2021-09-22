@@ -30,12 +30,11 @@ The dafault port of the app SeedDMS is 8065.
 
 If necessary change the ports in the environment file .env and the volume mounts in `docker-compose.yml`.
 
-
 ## Install within BIBBOX
 
 You can use the [BIBBOX APP Store](http://bibbox.readthedocs.io/en/latest/admin-documentation/ "BIBBOX App Store") to install a lot of software tools. 
 
-## Docker Images in the Aoo
+## Docker Images used
  * [bibbox/seeddms](https://hub.docker.com/r/bibbox/seeddms/) 
  * [mariaDB](https://hub.docker.com/_/mariadb/), offical mariaDB container
  
