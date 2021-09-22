@@ -57,4 +57,4 @@ The default values for the standalone installation are:
 * _./data/var/www/html/seeddms60x/data_ will be mounted to _/var/www/html/seeddms60x/data:rw_ 
 * _./entrypoint.sh_ will be mounted to _/var/entrypoint.sh_
 ### SEED-DMS DB Container
-* _./data/var/lib/mysql_ will be mounted to _/var/lib/mysql_ (SEED-DMS DB Container)
+* _./data/var/lib/mysql_ will be mounted to _/var/lib/mysql_ 
