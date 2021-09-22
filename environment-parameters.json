@@ -1,0 +1,20 @@
+[
+    {
+       "id":"MYSQL_ROOT_PASSWORD",
+       "display_name":"MySQL Root Password",
+       "type":"text",
+       "default_value":"thispasswordisneverusedeveninsidethecontainer",
+       "description":"Root Password for MySQL DB, remember well",
+       "min_length": "1",
+       "max_length": "128"
+    },
+    {
+       "id":"MYSQL_USER_PASSWORD",
+       "display_name":"MySQL User Password",
+       "type":"text",
+       "default_value":"seeddms4bibbox",
+       "description":"User Password for MySQL DB, username = seeddms",
+       "min_length": "1",
+       "max_length": "128"
+    }
+]

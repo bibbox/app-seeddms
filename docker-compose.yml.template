@@ -3,35 +3,41 @@ version: '3'
 networks:
     bibbox-default-network:
       external: true
-
+      
 services:
 
-  bibbox-seeddms-db:
+  §§INSTANCE-seeddms-db:
     image: mariadb
-    container_name: bibbox-seeddms-db
+    container_name: §§INSTANCE-seeddms-db
     user: root
     networks:
       - bibbox-default-network
     environment:
-      - MYSQL_ROOT_PASSWORD=bibbox
+      - MYSQL_ROOT_PASSWORD=§§MYSQL_ROOT_PASSWORD
       - MYSQL_DATABASE=seeddms
       - MYSQL_USER=seeddms
-      - MYSQL_PASSWORD=seeddms4bibbox
+      - MYSQL_PASSWORD=§§MYSQL_USER_PASSWORD
     volumes:
       - ./data/var/lib/mysql:/var/lib/mysql
-      
-  bibbox-seeddms:
+
+  §§INSTANCE-seeddms:
     image: bibbox/seeddms:6.0.11
-    container_name:  bibbox-seeddms
+    container_name: §§INSTANCE-seeddms
     networks:
       - bibbox-default-network
     links:
-      - bibbox-seeddms-db:seeddms-db
+      - §§INSTANCE-seeddms-db:seeddms-db
     ports:
       - "8065:80"
     depends_on:
-      - bibbox-seeddms-db
+      - §§INSTANCE-seeddms-db
+    proxy:
+     TYPE: PRIMARY
+     URLPREFIX: §§INSTANCE
+     TEMPLATE: default
+     DISPLAYNAME: 'SeedDMS' 
     volumes:
       - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data
+
 
 
