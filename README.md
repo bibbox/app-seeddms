@@ -32,7 +32,7 @@ If necessary change the ports in the environment file .env and the volume mounts
 
 ## Install within BIBBOX
 
-You can use the [BIBBOX APP Store](http://bibbox.readthedocs.io/en/latest/admin-documentation/ "BIBBOX App Store") to install a lot of software tools. 
+Follow the link above and find the App by its name. Click on the Symbol and select Install. Then fill the Parameters below and Name your app Click install again
 
 ## Docker Images used
  * [bibbox/seeddms](https://hub.docker.com/r/bibbox/seeddms/) 
