@@ -36,7 +36,6 @@ services:
      URLPREFIX: §§INSTANCE
      TEMPLATE: websocket
      DISPLAYNAME: 'SeedDMS' 
-     PATH_TO_SOCKET: '/install/install.php/'
     volumes:
       - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data
 
