@@ -4,7 +4,7 @@
 
 * A new Tab will open in your browser and show you a blank page with a warning to use the SeedDMS installer.
 
-![SCREEN1](screen-01.jpg)
+![SCREEN1](/assets/screen-01.jpg)
 
 * From the current URL navigate to **/install/install.php** through the browser's address bar. Here you will find the installers welcome page. 
 Update in the database settings the password as you specified in the App installation screen and 
