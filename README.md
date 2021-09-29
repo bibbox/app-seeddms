@@ -13,14 +13,6 @@ To install this app locally execute the commands:
 
 `cd app-seeddmsTNG`
 
-`mkdir -p data/var/lib/mysql`
-
-`mkdir -p data/var/www/seeddms60x/data/lucene`
-
-`mkdir -p data/var/www/seeddms60x/data/staging`
-
-`docker network create bibbox-default-network`
-
 `docker-compose up -d`
 
 After the Installation open "localhost:8065/install/install.php" in browser to set up SeedDMS.
