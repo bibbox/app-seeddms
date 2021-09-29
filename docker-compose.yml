@@ -32,6 +32,6 @@ services:
     depends_on:
       - bibbox-seeddms-db
     volumes:
-      - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data
+      - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data:rw
 
 
