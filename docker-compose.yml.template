@@ -37,7 +37,7 @@ services:
      TEMPLATE: default
      DISPLAYNAME: 'SeedDMS' 
     volumes:
-      - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data
+      - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data:rw
 
 
 
