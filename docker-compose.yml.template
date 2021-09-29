@@ -34,7 +34,7 @@ services:
     proxy:
      TYPE: PRIMARY
      URLPREFIX: §§INSTANCE
-     TEMPLATE: websocket
+     TEMPLATE: default
      DISPLAYNAME: 'SeedDMS' 
     volumes:
       - ./data/var/www/html/seeddms60x/data:/var/www/html/seeddms60x/data
