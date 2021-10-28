@@ -1,4 +1,4 @@
-SeedDMS BIBBOX application
+# SeedDMS BIBBOX application
 
 This container can be installed as [BIBBOX APP](http://bibbox.readthedocs.io/en/latest/admin-documentation/ "BIBBOX App Store") or standalone. 
 
@@ -7,40 +7,25 @@ This container can be installed as [BIBBOX APP](http://bibbox.readthedocs.io/en/
 
 ## Standalone Installation 
 
-To install the app locally execute the commands:
+To install this app locally execute the commands:
 
-`sudo git clone https://github.com/bibbox/app-seeddmsTNG`
+`git clone https://github.com/bibbox/app-seeddmsTNG`
 
 `cd app-seeddmsTNG`
-
-`mkdir -p data/var/lib/mysql`
-
-`mkdir -p data/var/www/seeddms60x/data/lucene`
-
-`mkdir -p data/var/www/seeddms60x/data/staging`
-
-`docker network create bibbox-default-network`
 
 `docker-compose up -d`
 
 After the Installation open "localhost:8065/install/install.php" in browser to set up SeedDMS.
 
-The de
-fault port of the app SeedDMS is 8065.
+The default port of the app SeedDMS is 8065.
 
 If necessary change the ports in the environment file .env and the volume mounts in `docker-compose.yml`.
 
-
 ## Install within BIBBOX
 
-The BIBBOX framework can be installed 
-* as a [virtual machine](http://bibbox.bbmri-eric.eu/resources/machine/), 
-* using [vagrant/puppet](http://bibbox.readthedocs.io/en/latest/installation-vagrant/) 
-* are on any Ubuntu System following these [instructions](http://bibbox.readthedocs.io/en/latest/installation-source/)  
+Follow the link above and find the App by its name. Click on the Symbol and select Install. Then fill the Parameters below and Name your app Click install again
 
-After BIBBOX is up and running, you can use the [BIBBOX APP Store](http://bibbox.readthedocs.io/en/latest/admin-documentation/ "BIBBOX App Store") to install a lot of software tools. 
-
-## Docker Images in the Aoo
+## Docker Images used
  * [bibbox/seeddms](https://hub.docker.com/r/bibbox/seeddms/) 
  * [mariaDB](https://hub.docker.com/_/mariadb/), offical mariaDB container
  
@@ -54,7 +39,13 @@ The default values for the standalone installation are:
   * MYSQL_ROOT_PASSWORD=seeddms
   * MYSQL_DATABASE=seeddms
   * MYSQL_USER=seeddms
-  * MYSQL_PASSWORD=seeddms
+  * MYSQL_PASSWORD=seeddms4bibbox
   * INSTANCE=bibbox
   * PORT=8065
-
+  
+  ## Mounted Volumes
+### SEED-DMS Container
+* _./data/var/www/html/seeddms60x/data_ will be mounted to _/var/www/html/seeddms60x/data:rw_ 
+* _./entrypoint.sh_ will be mounted to _/var/entrypoint.sh_
+### SEED-DMS DB Container
+* _./data/var/lib/mysql_ will be mounted to _/var/lib/mysql_ 
