@@ -7,7 +7,7 @@
 ![SCREEN1](/assets/screen-01.jpg)
 
 * From the current URL navigate to **/install/install.php** through the browser's address bar. Here you will find the installers welcome page. 
-Update in the database settings the password as you specified in the App installation screen and 
+Update the password for the database settings as you specified in the App installation screen and 
 make sure to check **Create database tables** and click **Apply**!
 
 ![SCREEN2](/assets/screen-03.jpg)
