@@ -1,7 +1,7 @@
 {
-	"name": "SeedDMS v6.0.15",
+	"name": "SeedDMS v6.0.19",
 	"short_name": "SeedDMS",
-	"version": "v6.0.15",
+	"version": "v6.0.19",
 	"description": "SeedDMS is an easy to use but powerful Open Source Document Management System based on PHP and MySQL or sqlite3.",
         "short_description": "Document Management System",
 	"catalogue_url": "",
