@@ -21,7 +21,7 @@ services:
       - ./data/var/lib/mysql:/var/lib/mysql
 
   §§INSTANCE-seeddms:
-    image: bibbox/seeddms:6.0.11
+    image: bibbox/seeddms:6.0.19
     container_name: §§INSTANCE-seeddms
     networks:
       - bibbox-default-network
