@@ -15,7 +15,7 @@ cd app-seeddms
 docker-compose up -d
 ```
 
-The main app can be opened and set up at
+The main App can be opened and set up at
 ```
 localhost:8065/install/install.php
 ```
