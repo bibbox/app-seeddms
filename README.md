@@ -10,8 +10,8 @@ This container can be installed as [BIBBOX APP](https://bibbox.readthedocs.io/en
 Clone the github repsoitory. If necessary change the ports in the environment file `.env` and the volume mounts in `docker-compose.yml`.
 
 ```
-git clone https://github.com/bibbox/app-seeddmsTNG
-cd app-seeddmsTNG
+git clone https://github.com/bibbox/app-seeddms
+cd app-seeddms
 docker-compose up -d
 ```
 
