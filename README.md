@@ -12,6 +12,7 @@ Clone the github repsoitory. If necessary change the ports in the environment fi
 ```
 git clone https://github.com/bibbox/app-seeddms
 cd app-seeddms
+docker network create bibbox-default-network
 docker-compose up -d
 ```
 
