@@ -23,6 +23,7 @@ services:
   bibbox-seeddms:
     image: bibbox/seeddms:6.0.19
     container_name:  bibbox-seeddms
+    platform: linux/amd64
     networks:
       - bibbox-default-network
     links:
