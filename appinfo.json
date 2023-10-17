@@ -8,5 +8,5 @@
 	"application_url": "http://www.seeddms.org",
 	"tags": ["Document Management"],
 	"application_documentation_url": "https://www.seeddms.org/changelog/",
-	"instance_information": "work in progress"
+	"instance_information": "<p>SeedDMS is an open-source document management system designed to help organizations efficiently store, manage, and retrieve digital documents and records.</p>"
 }
